@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Make travelling more than just a dream</title>
+		<meta name="description" content="Surreal Staycation" />
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+	</head>
+
+	<body bgcolor="#000000">
+
+		<section class="bg1" style="height: 100VH;">
+			<div class="row" style="position: absolute; top: 80VH; left: 0;">
+				<div class="column" style="flex:15%;">
+					<img src="logo.jpg" class="logo" alt="Logo" style="width:100%">
+				</div>
+				<div class="column" style="flex:85%;">
+					<h1 style="color:black;">It's time to make your next trip <em><b>SURREAL</b></em></h1>
+				</div>
+			</div>
+		</section>
+
+		<section id="topnav" bgcolor="black">
+			<ul>
+		        <li><a class="active" href="index.html">Home</a></li>
+		        <li><a href="about.html">About Us</a></li>
+		        <li><a href="packages.html">Packages</a></li>
+		        <li><a href="testimonials.html">Testimonials</a></li>
+		        <li><a href="register.html">Register</a></li>
+		        <li><a href="contact.html">Contact Us</a></li>
+	       	</ul>
+	    </section>
+
+		<div style="color: white;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
+			<h3 style="text-align:center;">Welcome to your new travel experience</h3>
+			<p>Surreal travel is the premium travel agency to get you booked on the vacation of your dreams</p>
+		</div>
+
+		<section class="bg2">
+			<section class="caption">
+			  	<span class="border" style="background-color: transparent; font-size:0px; color: white;">
+			  		Time to experience travel so <br/><br/>dreamlike it's <br/><br/>SURREAL
+			  	</span>
+			</section>
+		</section>
+
+		<section class="content gallery">
+			<div class="row">
+				<div class="column" >
+					<img src="cliff.jpg" alt="Cliff" class="gallery">
+				</div>
+				<div class="column">
+					<img src="waterfall2.jpg" alt="A waterfall" class="gallery">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column">
+					<img src="venice.jpg" alt="Venice" class="gallery">
+				</div>
+				<div class="column">
+					<img src="waterfall1.jpg" alt="Another waterfall" class="gallery">
+				</div>
+			</div>
+
+		</section>
+
+
+		<section class="section parallax bg2" />
+
+		<section>
+			<div class="row">
+				<div class="column">
+					<img src="register.jpg" width="100px" height="auto" href="register.html">
+				</div>
+				<div>
+					<img src="contact.png" width="100px" height="auto" href="contact.html">
+				</div>
+
+		</section>
+
+		<section class="footer">
+		<p>Copyright &#169 2020 Surreal Travel Ltd. All Rights Reserved.</p>
+		</section>
+
+		<script>
+
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.getElementById("topnav");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  	if (window.pageYOffset >= sticky) {
+		    	navbar.classList.add("sticky")
+		  	} else {
+		    	navbar.classList.remove("sticky");
+			}
+		}
+
+		</script>
+
+	</body>
+</html>
+
