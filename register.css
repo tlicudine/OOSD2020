@@ -1,0 +1,27 @@
+label {
+	font-weight: bold; 
+	color: black;
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+
+.formlabel{
+
+}
+
+input:required:focus {
+border: 1px solid red;
+outline: none;
+}
+
+.formContainer {
+	background-color: gray;
+	border-color: black;
+	width: 80%;"
+}
+
+span {
+	display: flex;
+	align-items: flex-start;
+}

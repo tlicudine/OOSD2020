@@ -1,46 +1,76 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+
 <head>
-
-	<title>Make travelling more than just a dream</title>
-	<meta name="description" content="Surreal Travel">
-
-	<link rel="stylesheet" href="style.css">
+	
+	<title></title>
+	<link rel="stylesheet" href="register.css">
 
 </head>
 
 <body>
-    <nav>
-        <!-- Main Navigation inside <header> -->
-        <ul>
-            <li><a href="default.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+	<form action="bouncer.php" method="POST">
 
+<!-- onsubmit="return confirm('Do you really want to submit the form?');" -->
 
-Register
+		<fieldset class="formContainer">
 
-</body>
-    <form method="post" action="bouncer.php">
-        <label for="fname">First Name:</label>
-        <input type="text" name="fname" id="fname" /><br />
+			<h3>Fill out the form for more information</h3>
+			<span>
+				<label class="formlabel" for="firstName">First Name</label>
+				<input type="text" name="firstName" id="firstName" required>
+			</span>
 
-        <label for="lname">Last Name:</label>
-        <input type="text" name="lname" id="lname" /><br />
+			<span>
+				<label class="formlabel" for="lastName">Last Name:</label>
+				<input type="text" name="lastName" required>
+			</span>
 
-        <label for="phone">Phone Number:</label>
-        <input type="text" name="phone" id="phone" /><br />
+			<span>
+				<label class="formlabel" for="email">Email</label>
+				<input type="email" name="email" id="email" required>
+			</span>
 
+			<span>
+				<label class="formlabel" for="password">Password</label>
+				<input type="password" name="password" id="password" required>
+			</span>
 
-        <input type="submit" value="Register" />
-        <input type="reset" />
-    </form>
+			<span>
+				<label>Gender<label>
+				<span>
+					<input type="radio" name="gender" value="male" id="male" style="width: 2em; height: 2em;" required>
+					<label>Male</label>
+					<input type="radio" name="gender" value="female" id="female" style="width: 2em; height: 2em;">
+					<label>Female</label>	
+					<input type="radio" name="gender" value="other" id="other" style="width: 2em; height: 2em;">
+					<label>Other</label>
+				</span>
+			</span>
+			
+			<span>
+				<label for="age">Are you over 18?</label>
+				<input type="checkbox" name="age" id="age" value="over18" required>
+			</span>
 
-    <p>Copyright &#169 2020 Surreal Travel Ltd. All Rights Reserved.</p>
+			<span>
+				<label class="formlabel">Desired Trip Start</label>
+				<input type="date" name="tripStart" id="tripStart" required>
+			</span>
+
+			<span>
+				<label class="formlabel">Desired Travel End</label>
+				<input type="date" name="tripEnd" id="tripEnd" required>
+			</span>
+		
+		</fieldset>
+
+		<button type="submit" value="Submit" onclick="return validate()">Submit Information</button>
+		<button type="reset" value="Reset">Reset Form</button>
+		
+	</form>
+
+<script src="register.js"></script>
 
 </body>
 </html>

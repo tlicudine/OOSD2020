@@ -7,28 +7,9 @@ body, html {
 }
 
 /* Navigation bar*/
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  padding: 8px;
-  background-color: #dddddd;
-}
-
 #topnav {
   overflow: hidden;
   background-color: #333;
-  z-index: 100;
 }
 
 #topnav a {
@@ -61,7 +42,7 @@ li a {
 }
 
 /* Parallax effects */
-.bg1, .bg2, .bg3 {
+.hero, .bg2, .bg3 {
   position: relative;
   opacity: 0.7;
   background-attachment: fixed;
@@ -70,7 +51,7 @@ li a {
   background-size: cover;
 }
 
-.bg1 {
+.hero {
   background-image: url("bg1.jpg");
   min-height: 100%;
 }
@@ -106,8 +87,8 @@ img.gallery {
   border-radius: 5%;
   max-width: 90%;
   height: auto;
-  box-shadow: 0px 0px 30px 10px #FFFFFF;
-  filter: sepia(50%);
+  box-shadow: 0px 0px 30px 10px #FFFFFF
+;
 }
 
 img.logo {
@@ -131,5 +112,3 @@ div {
 .gallery {
   align-content: flex-start;
 }
-
-
