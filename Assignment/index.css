@@ -1,0 +1,126 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 16px/1.8 "Kaushan Script", sans-serif;
+  letter-spacing: 2px;
+  color: #777;
+}
+div {
+  height: auto;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 10vh;
+}
+
+.gallery {
+  align-content: flex-start;
+}
+
+/* Navigation bar*/
+#topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+#topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#topnav a:active {
+  background-color: grey;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* Parallax effects */
+.hero, .bg2, .bg3 {
+  position: relative;
+  opacity: 0.7;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  background-image: url("BoatRiver.jpg");
+  min-height: 100%;
+}
+
+.bg2 {
+  background-image: url("Beach.jpg");
+  min-height: 400px;
+}
+
+.bg3 {
+  background-image: url("Tower.jpg");
+  min-height: 400px;
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/* Image settings */
+img.gallery {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 5%;
+  max-width: 90%;
+  box-shadow: 0px 0px 30px 10px #FFFFFF;
+  transition-property: height, width;
+  transition-duration: .5s;
+  filter: sepia(50%);
+}
+
+img.gallery:hover {
+  width: 200px;
+  height: 200px;
+  filter: sepia(0%);
+}
+
+img.logo {
+  border-radius: 50%;
+  }
+

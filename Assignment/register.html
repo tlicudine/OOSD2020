@@ -8,57 +8,58 @@
 
 </head>
 
-<body>
-	<form action="bouncer.php" method="POST">
+<body style="">
+	<form action="bouncer.php" method="POST" onsubmit="return confirm('Do you really want to submit the form?');">
 
-<!-- onsubmit="return confirm('Do you really want to submit the form?');" -->
 
-		<fieldset class="formContainer">
 
-			<h3>Fill out the form for more information</h3>
-			<span>
+		<fieldset class="container">
+
+			<h1>Fill out the form for more information</h1>
+
+			<span class="container">
 				<label class="formlabel" for="firstName">First Name</label>
 				<input type="text" name="firstName" id="firstName" required>
 			</span>
 
-			<span>
+			<span class="container">
 				<label class="formlabel" for="lastName">Last Name:</label>
 				<input type="text" name="lastName" required>
 			</span>
 
-			<span>
+			<span class="container">
 				<label class="formlabel" for="email">Email</label>
 				<input type="email" name="email" id="email" required>
 			</span>
 
-			<span>
+			<span class="container">
 				<label class="formlabel" for="password">Password</label>
 				<input type="password" name="password" id="password" required>
 			</span>
 
-			<span>
+			<span class="container">
 				<label>Gender<label>
-				<span>
+				<div class="container">
 					<input type="radio" name="gender" value="male" id="male" style="width: 2em; height: 2em;" required>
 					<label>Male</label>
 					<input type="radio" name="gender" value="female" id="female" style="width: 2em; height: 2em;">
 					<label>Female</label>	
 					<input type="radio" name="gender" value="other" id="other" style="width: 2em; height: 2em;">
 					<label>Other</label>
-				</span>
+				</div>
 			</span>
 			
-			<span>
+			<span class="container">
 				<label for="age">Are you over 18?</label>
 				<input type="checkbox" name="age" id="age" value="over18" required>
 			</span>
 
-			<span>
+			<span class="container">
 				<label class="formlabel">Desired Trip Start</label>
 				<input type="date" name="tripStart" id="tripStart" required>
 			</span>
 
-			<span>
+			<span class="container">
 				<label class="formlabel">Desired Travel End</label>
 				<input type="date" name="tripEnd" id="tripEnd" required>
 			</span>
