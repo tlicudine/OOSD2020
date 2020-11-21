@@ -8,10 +8,8 @@
 
 </head>
 
-<body style="">
+<body>
 	<form action="bouncer.php" method="POST" onsubmit="return confirm('Do you really want to submit the form?');">
-
-
 
 		<fieldset class="container">
 
@@ -63,11 +61,17 @@
 				<label class="formlabel">Desired Travel End</label>
 				<input type="date" name="tripEnd" id="tripEnd" required>
 			</span>
-		
-		</fieldset>
 
-		<button type="submit" value="Submit" onclick="return validate()">Submit Information</button>
-		<button type="reset" value="Reset">Reset Form</button>
+			<span class="container">
+				<button type="submit" value="Submit" onclick="return validate()">
+					Submit Information
+				</button>
+				<button type="reset" value="Reset">
+				Reset Form
+				</button>
+			</span>
+
+		</fieldset>
 		
 	</form>
 
