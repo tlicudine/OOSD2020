@@ -2,55 +2,69 @@
 <html>
 <head>
 	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 
-		body {
-			color: white;
-		}
-
-		.gallerysection{
+		.gallerysection {
 			height: 100VH;
-		    width: 100VW;
-		    border: 1px solid red;
+		    width: 95VW;
 		    white-space: nowrap;
 		    text-align: center;
 		    box-sizing: border-box;
 		    display: flex;
+		    flex-wrap: nowrap;
 		    justify-content: center;
 		    align-items: center;
+		    /*overflow-x: hidden;*/
+		    margin: auto;
 		}
 
-		div.galleryitem {
+		.picDescContainer {
 			margin: 10px;
-			border: 1px solid #ccc;
-			width: 200px;
-			filter: sepia(100%);
-			transform-origin: center center;
-			transition-property: height, width, filter;
+			border: 2px solid red;
+			/*width: auto;*/
+			flex: 0 1 auto;
+		}
+
+		.picDescContainer img {
+			border-radius: 3%;
+			/*clear: before;*/
+		  	width: 250px;
+		 	height: auto;
+		 	filter: sepia(100%);
+		 	transform-origin: center center;
+			transition-property: height, width, filter, border-top-left-radius,
+			border-top-left-radius;
 			transition-duration: .8s;
 			transition-timing-function: ease-in-out;
 			vertical-align: middle;
 		}
 
-		div.galleryitem:hover {
-		  	border: 1px solid #777;
-		  	width: 500px;
-		  	filter: sepia(0%);
-		}
-
-		div.galleryitem img {
-			clear: before;
-		  	width: 500;
-		 	height: auto;
-		}
-
 		.desc {
-			box-sizing: border-box;
-		  	padding: 15px;
+			color: white;
+			/*box-sizing: border-box;*/
+		  	/*padding: 15px;*/
+		  	height: 30px;
+		  	/*width: auto;*/
+		  	border: 2px solid blue;
 		  	text-align: center;
-		  	width: 300px;
-		  	border: 2px solid black;
 		  	overflow: hidden;
+		  	transition-duration: .8s;
+		  	transition-timing-function: ease-in-out;
+		  	transition-property: opacity;
+		  	opacity: 0%;
+		  	/*visibility: hidden;*/
+		}
+
+		.picDescContainer:hover .desc{
+			/*height: auto;*/
+			/*visibility: visible;*/
+			opacity: 100%;
+		}
+
+		.picDescContainer:hover img{
+		  	width: 600px;
+		  	filter: sepia(0%);
 		}
 
 	</style>
@@ -58,45 +72,37 @@
 <body bgcolor="black">
 
 	<div class="gallerysection">
-		<div class="galleryitem">
-			<a target="_blank" href="../Waterfall1.jpg">
-			<img src="../Waterfall1.jpg" alt="Forest" width="600" height="400">
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Waterfall1.jpg">
+			<img src="../img/Waterfall1.jpg" alt="Forest" width="600" height="400">
 			</a>
 			<div class="desc">Add a description of the image here</div>
 		</div>
 
-		<div class="galleryitem">
-			<a target="_blank" href="../Cliff.jpg">
-			<img src="../Cliff.jpg" alt="Northern Lights" width="600" height="400">
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Cliff.jpg">
+			<img src="../img/Cliff.jpg" alt="Northern Lights" width="600" height="400">
 			</a>
 			<div class="desc">Add a description of the image here</div>
 		</div>
 
-		<div class="galleryitem">
-			<a target="_blank" href="../DrinkingWater.jpg">
-			<img src="../DrinkingWater.jpg" alt="Mountains" width="600" height="400">
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Madrid.jpg">
+			<img src="../img/Madrid.jpg" alt="Cinque Terre" width="600" height="400">
 			</a>
 			<div class="desc">Add a description of the image here</div>
 		</div>
 
-
-		<div class="galleryitem">
-			<a target="_blank" href="../Madrid.jpg">
-			<img src="../Madrid.jpg" alt="Cinque Terre" width="600" height="400">
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Venice.jpg">
+			<img src="../img/Venice.jpg" alt="Forest" width="600" height="400">
 			</a>
 			<div class="desc">Add a description of the image here</div>
 		</div>
 
-		<div class="galleryitem">
-			<a target="_blank" href="../Venice.jpg">
-			<img src="../Venice.jpg" alt="Forest" width="600" height="400">
-			</a>
-			<div class="desc">Add a description of the image here</div>
-		</div>
-
-		<div class="galleryitem">
-			<a target="_blank" href="../Santorini.jpg">
-			<img src="../Santorini.jpg" alt="Northern Lights" width="600" height="400">
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Santorini.jpg">
+			<img src="../img/Santorini.jpg" alt="Northern Lights" width="600" height="400">
 			</a>
 			<div class="desc">Add a description of the image here</div>
 		</div>

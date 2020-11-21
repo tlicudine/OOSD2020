@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+		.gallerysection {
+			height: 100VH;
+			width: 95VW;
+			white-space: nowrap;
+			text-align: center;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow-x: hidden;
+			margin: auto;
+		}
+
+		.picDescContainer {
+			margin: 20px;
+			border: 2px solid red;
+			width: auto;
+		}
+
+		.picDescContainer img {
+			clear: before;
+			width: 300px;
+			height: auto;
+			filter: sepia(100%);
+			transform-origin: center center;
+			transition-property: height, width, filter, border-top-left-radius,
+			border-top-left-radius;
+			transition-duration: .8s;
+			transition-timing-function: ease-in-out;
+			vertical-align: middle;
+			flex: 0 1 auto;
+		}
+
+		.desc {
+			color: white;
+			box-sizing: border-box;
+			padding: 15px;
+			height: 0px;
+			width: auto;
+			border: 2px solid blue;
+			text-align: center;
+			overflow: hidden;
+			transition-duration: .8s;
+			transition-timing-function: ease-in-out;
+			transition-property: height, visibility, opacity;
+			opacity: 0%
+		}
+
+		.picDescContainer:hover .desc{
+			height: auto;
+			visibility: visible;
+			opacity: 100%;
+		}
+
+		.picDescContainer:hover img{
+			border: 1px solid #777;
+			width: 400px;
+			filter: sepia(0%);
+		}
+	</style>
+
+</head>
+<body bgcolor="black">
+	<script type="text/javascript">
+		var imgArray = [
+			["Italy", "A boat in a canal of Venice", "../img/Venice.jpg"],
+			["Spain", "A warm beach in Madrid", "../img/Venice.jpg"],
+			["Greece", "The beautiful coast and characteristic buildings of Santorini", "../img/Santorini.jpg"],
+			["New Zealand", "The beautiful location that the Lord of the Rings came to life", "../img/NewZealand.jpg"],
+			["Australia", "The city coastline of Sydney", "../img/Sydney.jpg"],
+		]
+
+		document.write("<div class='gallerysection'>");
+
+		for (i = 0 ; i < imgArray.length; i++) {
+			document.write('<div class="picDescContainer">');
+			document.write('<a target="_blank" href="'+imgArray[i][2]+'">');
+			document.write('<img src="'+imgArray[i][2]+'" alt="'+imgArray[i][0]+'" width="600" height="400"></a>');
+			document.write('<div class="desc">'+imgArray[i][1]+'</div>');
+			document.write('</div>');
+		}
+
+		document.write('</div>');
+
+	</script>
+</body>
+</html>
