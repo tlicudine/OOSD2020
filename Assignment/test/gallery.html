@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+
+		body {
+			color: white;
+		}
+
+		.gallerysection{
+			height: 100VH;
+		    width: 100VW;
+		    border: 1px solid red;
+		    white-space: nowrap;
+		    text-align: center;
+		    box-sizing: border-box;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+
+		div.galleryitem {
+			margin: 10px;
+			border: 1px solid #ccc;
+			width: 200px;
+			filter: sepia(100%);
+			transform-origin: center center;
+			transition-property: height, width, filter;
+			transition-duration: .8s;
+			transition-timing-function: ease-in-out;
+			vertical-align: middle;
+		}
+
+		div.galleryitem:hover {
+		  	border: 1px solid #777;
+		  	width: 500px;
+		  	filter: sepia(0%);
+		}
+
+		div.galleryitem img {
+			clear: before;
+		  	width: 500;
+		 	height: auto;
+		}
+
+		.desc {
+			box-sizing: border-box;
+		  	padding: 15px;
+		  	text-align: center;
+		  	width: 300px;
+		  	border: 2px solid black;
+		  	overflow: hidden;
+		}
+
+	</style>
+</head>
+<body bgcolor="black">
+
+	<div class="gallerysection">
+		<div class="galleryitem">
+			<a target="_blank" href="../Waterfall1.jpg">
+			<img src="../Waterfall1.jpg" alt="Forest" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+		<div class="galleryitem">
+			<a target="_blank" href="../Cliff.jpg">
+			<img src="../Cliff.jpg" alt="Northern Lights" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+		<div class="galleryitem">
+			<a target="_blank" href="../DrinkingWater.jpg">
+			<img src="../DrinkingWater.jpg" alt="Mountains" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+
+		<div class="galleryitem">
+			<a target="_blank" href="../Madrid.jpg">
+			<img src="../Madrid.jpg" alt="Cinque Terre" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+		<div class="galleryitem">
+			<a target="_blank" href="../Venice.jpg">
+			<img src="../Venice.jpg" alt="Forest" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+		<div class="galleryitem">
+			<a target="_blank" href="../Santorini.jpg">
+			<img src="../Santorini.jpg" alt="Northern Lights" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

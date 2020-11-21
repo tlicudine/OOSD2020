@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		div.frame {
+			height: 400px;
+			width: 100%;
+			border: 1px solid red;
+			background-color: pink;
+			text-align: center; 
+		}
+
+		.helper {
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+
+		img.gallery {
+			height: 100px;
+			width: 100px;
+			transform-origin: center center;
+			transition-property: height, width, filter;
+			transition-duration: .5s;
+			margin-left: auto;
+			margin-right: auto;
+			filter: sepia(50%);
+			vertical-align: middle;
+			border: 1px;
+			margin: auto;
+		}
+
+		img:hover {
+			width: 200px;
+			height: 200px;
+			filter: sepia(0%);
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class=frame>
+		<span class="helper"></span>
+		<img class="gallery" src="laughing.png" alt="Smiley" />
+	</div>
+
+</body>
+</html>
