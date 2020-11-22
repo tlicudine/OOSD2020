@@ -69,17 +69,17 @@ div {
 }
 
 .hero {
-  background-image: url("BoatRiver.jpg");
+  background-image: url("img/BoatRiver.jpg");
   min-height: 100%;
 }
 
 .bg2 {
-  background-image: url("Beach.jpg");
+  background-image: url("img/Beach.jpg");
   min-height: 400px;
 }
 
 .bg3 {
-  background-image: url("Tower.jpg");
+  background-image: url("img/Tower.jpg");
   min-height: 400px;
 }
 .caption {

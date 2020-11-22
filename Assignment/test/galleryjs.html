@@ -4,85 +4,114 @@
 	<title></title>
 
 	<style>
+		
+		body {
+			background-color: black;
+		}
+		
 		.gallerysection {
 			height: 100VH;
-			width: 95VW;
-			white-space: nowrap;
-			text-align: center;
-			box-sizing: border-box;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			overflow-x: hidden;
-			margin: auto;
+		    width: 95VW;
+		    white-space: nowrap;
+		    text-align: center;
+		    box-sizing: border-box;
+		    display: flex;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-items: center;
+		    /*overflow-x: hidden;*/
+		    margin: auto;
 		}
 
 		.picDescContainer {
-			margin: 20px;
+			margin: 10px;
 			border: 2px solid red;
-			width: auto;
+			/*width: auto;*/
+			flex: 0 1 auto;
 		}
 
 		.picDescContainer img {
-			clear: before;
-			width: 300px;
-			height: auto;
-			filter: sepia(100%);
-			transform-origin: center center;
+			border-radius: 3%;
+			/*clear: before;*/
+		  	width: 250px;
+		 	height: auto;
+		 	filter: sepia(100%);
+		 	transform-origin: center center;
 			transition-property: height, width, filter, border-top-left-radius,
 			border-top-left-radius;
 			transition-duration: .8s;
 			transition-timing-function: ease-in-out;
 			vertical-align: middle;
-			flex: 0 1 auto;
 		}
 
 		.desc {
 			color: white;
-			box-sizing: border-box;
-			padding: 15px;
-			height: 0px;
-			width: auto;
-			border: 2px solid blue;
-			text-align: center;
-			overflow: hidden;
-			transition-duration: .8s;
-			transition-timing-function: ease-in-out;
-			transition-property: height, visibility, opacity;
-			opacity: 0%
+			/*box-sizing: border-box;*/
+		  	/*padding: 15px;*/
+		  	height: 30px;
+		  	width: 0px;
+		  	border: 2px solid blue;
+		  	text-align: center;
+		  	overflow: auto;
+		  	transition-duration: .8s;
+		  	transition-timing-function: ease-in-out;
+		  	transition-property: opacity, width;
+		  	opacity: 0%;
+		  	/*visibility: hidden;*/
 		}
 
 		.picDescContainer:hover .desc{
-			height: auto;
-			visibility: visible;
+			width: 600px;
+			/*visibility: visible;*/
 			opacity: 100%;
 		}
 
 		.picDescContainer:hover img{
-			border: 1px solid #777;
-			width: 400px;
-			filter: sepia(0%);
+		  	width: 600px;
+		  	filter: sepia(0%);
 		}
+
+
 	</style>
 
 </head>
 <body bgcolor="black">
 	<script type="text/javascript">
+		
+		//nested array where each is item is an array of [name, description, url]
 		var imgArray = [
 			["Italy", "A boat in a canal of Venice", "../img/Venice.jpg"],
 			["Spain", "A warm beach in Madrid", "../img/Venice.jpg"],
 			["Greece", "The beautiful coast and characteristic buildings of Santorini", "../img/Santorini.jpg"],
-			["New Zealand", "The beautiful location that the Lord of the Rings came to life", "../img/NewZealand.jpg"],
+			["New Zealand", "Where the epic journey of some hobbits was filmed", "../img/NewZealand.jpg"],
 			["Australia", "The city coastline of Sydney", "../img/Sydney.jpg"],
 		]
 
+		//create section container
 		document.write("<div class='gallerysection'>");
 
+		//write in each gallery item container that includes a picture and description box from array
 		for (i = 0 ; i < imgArray.length; i++) {
+			
+			//initialize vars
+			let descText = "";
+			let re = /\W/;
+
+			//create automatic breaks for items with lots of description text
+			for (len = 0 ; len < imgArray[i][1].length;){
+				let charPos = 0
+				if (imgArray[i][1].length )
+				if (imgArray[i][1].charAt() != re) {
+					descText.
+					len +=charPos;
+				}
+
+			}
+
 			document.write('<div class="picDescContainer">');
 			document.write('<a target="_blank" href="'+imgArray[i][2]+'">');
 			document.write('<img src="'+imgArray[i][2]+'" alt="'+imgArray[i][0]+'" width="600" height="400"></a>');
-			document.write('<div class="desc">'+imgArray[i][1]+'</div>');
+			document.write('<div class="desc">'+descText+'</div>');
 			document.write('</div>');
 		}
 
