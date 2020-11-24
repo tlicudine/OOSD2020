@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<a href="img/Beach.jpg"><img src="img/Beach.jpg"></a>
+	</div>
+
+
+	<script>
+		var myWindow;
+
+		function openWin() {
+			myWindow = window.open("", "myWindow", "width=600, height=400");
+			myWindow.setTimeout(closeWin, 5000);
+		}
+
+		
+		function closeWin() {
+			myWindow.close();
+		}
+
+	</script>
+
+</body>
+</html>

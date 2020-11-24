@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+
+		function openWin() {
+			imgWindow = window.open("img/Beach.jpg", "imgWindow", "width=600, height=400");
+			imgWindow.setTimeout(closeWin, 2500);
+		}
+
+		function closeWin() {
+			imgWindow.close();
+		}
+		
+		function movingImg() {
+			var image = document.querySelector("img");
+			var forward = true;
+			var imgpos = 0;
+			var timer = setInterval(updatePos, 10);
+			function updatePos() {
+				if (forward) {
+					++imgpos;
+					image.style.left = imgpos + 'px';
+					if (imgpos >= (document.body.clientWidth - image.width)) {
+						forward = false;
+					};
+				} else {
+					--imgpos;
+					image.style.left = imgpos + 'px';
+					if (imgpos <= 0) {
+						forward = true;
+					};
+				}
+			}
+		}
+
+	</script>
+</head>
+<body onload="movingImg()">
+
+	<div>
+		<a class="img1" onclick="openWin()"><img src="img/Beach.jpg" style="position: absolute; width:600px; height:400px; top:100px; left: 0px;"></a>
+	</div>
+
+</body>
+</html>
