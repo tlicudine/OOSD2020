@@ -1,4 +1,4 @@
-window.onscroll = function() {myFunction()};
+document.window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("topnav");
 var sticky = navbar.offsetTop;
@@ -12,7 +12,7 @@ function myFunction() {
 }
 
 function gallery() {
-	for getElementById() in somewhere {
+	// for getElementById() in somewhere {
 
 	}
 
