@@ -8,23 +8,23 @@
 	<meta charset="utf-8"/>
 	<meta name="keywords" content="keyword 1, keyword 2, keyword 3"/>
 
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="./css/index.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 
-	<script src="index.js"></script>
+	<script src="./js/index.js"></script>
 
 </head>
 
-<body bgcolor="#000000">
+<body>
 
 	<section class="hero" style="height: 100VH;">
 		<div class="row" style="position: absolute; top: 70VH; left: 0;">
 			<div class="column" style="flex:15%;">
-				<img src="logo.jpg" class="logo" alt="Logo" style="width:100%">
+				<img src="./img/logo.jpg" class="logo" alt="Logo" style="width:100%">
 			</div>
 			<div class="column" style="flex:85%;">
-				<h1 style="color:black;">It's time to make your next trip <em><b>SURREAL</b></em></h1>
+				<!-- <h1 style="color:black;">It's time to make your next trip <em><b>SURREAL</b></em></h1> -->
 			</div>
 		</div>
 	</section>
@@ -56,23 +56,40 @@
 		</section>
 	</section>
 
-	<section class="content gallery">
-		<div class="row">
-			<div class="column" >
-				<img src="img/cliff.jpg" alt="Cliff" class="gallery">
-			</div>
-			<div class="column">
-				<img src="img/waterfall2.jpg" alt="A waterfall" class="gallery">
-			</div>
+	<section class="gallerysection">
+		<div class="picDescContainer">
+			<a target="_blank" href="./img/Waterfall1.jpg">
+			<img src="./img/Waterfall1.jpg" alt="Waterfall" width="600" height="400">
+			</a>
+			<div class="desc">A beautiful waterfall</div>
 		</div>
 
-		<div class="row">
-			<div class="column">
-				<img src="img/venice.jpg" alt="Venice" class="gallery">
-			</div>
-			<div class="column">
-				<img src="img/waterfall1.jpg" alt="Another waterfall" class="gallery">
-			</div>
+		<div class="picDescContainer">
+			<a target="_blank" href="./img/Cliff.jpg">
+			<img src="./img/Cliff.jpg" alt="Cliff" width="600" height="400">
+			</a>
+			<div class="desc">A man overlooking a cliff</div>
+		</div>
+
+		<div class="picDescContainer">
+			<a target="_blank" href="./img/Madrid.jpg">
+			<img src="./img/Madrid.jpg" alt="Madrid" width="600" height="400">
+			</a>
+			<div class="desc">A beach in Madrid</div>
+		</div>
+
+		<div class="picDescContainer">
+			<a target="_blank" href="./img/Venice.jpg">
+			<img src="./img/Venice.jpg" alt="Venice" width="600" height="400">
+			</a>
+			<div class="desc">A canal in Venice</div>
+		</div>
+
+		<div class="picDescContainer">
+			<a target="_blank" href="./img/Santorini.jpg">
+			<img src="./img/Santorini.jpg" alt="Northern Lights" width="600" height="400">
+			</a>
+			<div class="desc">The coast along Santorini</div>
 		</div>
 
 	</section>
@@ -89,17 +106,17 @@
 	<section>
 		<div class="row">
 			<div class="column">
-				<a href="register.html"><img src="register.jpg" width="100px" height="auto"></a>
+				<a href="./register.html"><img src="./img/register.jpg" width="100px" height="auto"></a>
 			</div>
 			<div>
-				<a href="contact.html"><img src="contact.png" width="100px" height="auto"></a>
+				<a href="./contact.html"><img src="./img/contact.png" width="100px" height="auto"></a>
 			</div>
 
 	</section>
 
-	<footer class="content footer">
+	<section class="content footer">
 	<p>Copyright &#169 2020 Surreal Travel Ltd. All Rights Reserved.</p>
-	</footer>
+	</section>
 
 </body>
 </html>

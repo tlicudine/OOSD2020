@@ -1,19 +1,122 @@
 <!DOCTYPE html>
 <html>
+
+<!--   
+Changes I made:
+	- DRY principle: Don't Repeat Yourself 
+		- took out font coloring and bold tags for each label
+		- added css style all the labels
+		- alternatively, you could add a class and style them that way
+	- removed &nbsp - just add padding to your labels
+		- alternatively, I am sure there is an alignment solution for this
+	- inputs are void elements - they do not require close tags 
+	- all inputs are required in css
+	- aligned code to improve readability	
+-->
+
 <head>
 	<title></title>
-	<style type="text/css">
-		body {
-		 background-image: url("Mountains.jpg");
-		 background-color: lightgray;
-		 position: relative;
-		 opacity: 0.7;
-		 min-height: 100%;
-		}
-	</style>
 
+	<style type="text/css">
+
+		label {
+			font-weight: bold; 
+			color:white;
+			text-align: left;
+		    padding-bottom: 10px;
+		}
+
+		.formfield{
+			display: inline-block;
+		    float: left;
+		    clear: left;
+		    width: 130px;
+		}
+
+		input {
+/*			display: inline-block;
+			float: left;
+			required: required;*/
+			padding-bottom: 10px;
+		}
+
+	</style>
 </head>
+
+
 <body>
+
+	<form action="bouncer.php" method="get" onsubmit="return confirm('Do you really want to submit the form?');">
+		<fieldset style="background-color:gray; border-color:black; width:25%; margin:10px; ">
+			<legend style="color:black"><h3>Customer Information</h3></legend>
+
+			<label class="formfield">Name:</label>
+			<input type="text" name="name" size="30" maxlength="30">
+
+			<label class="formfield">Last Name:</b></label>
+			<input type="text" name="lastname" size="30" maxlength="30">
+
+			<label class="formfield">Your email:</label>
+			<!-- <input type="email" name="email" size="30" maxlength="30"> -->
+
+			<label class="formfield">New Password:</label>
+			<input type="password" name="pswd" maxlength="30" size="30">
+			<br>
+			<label>I am:<label>	<input type="radio" name="gender" value="male">
+			<label style="color:blue">Male</label>
+			<input type="radio" name="gender" value="female">
+			<label style="color:red">Female</label>	
+			<input type="radio" name="gender" value="other">
+			<label style="color:white">Other</label>
+			<br>
+			<label class="formfield">Birthdate:</label>
+			<input type="date" name="birthdate">
+		
+
+			Button On Click Test
+			<button type="submit" value="Submit" id="myBtn" onclick="buttonFunction()">Button</button>
+
+<!-- 			<script>
+			function buttonFunction() {
+			  	var x = document.getElementById("myButton");
+			  	confirm("button!");
+			}
+			</script> -->
+
+
+			<p>Click the button to display a confirm box.</p>
+
+			<button type="submit" value="Submit" onclick="testing()">Submit</button>
+
+<!-- 			<script>
+
+			function myFunction() {
+			  	confirm("myfunction!")
+			}
+
+			</script> -->
+
+<!-- 			<script>
+			var submit = document.querySelector("input[type=submit]");
+			
+			submit.setAttribute("onclick", "return testing()");
+			
+			function testing() 
+			{
+				if (confirm('Are you sure you want to submit this form?')	) 
+				{         
+			    	return true;         
+				} else {
+			    	return false;
+				}
+			}
+
+			</script>		
+ -->
+		</fieldset>
+
+	</form>
+
 
 </body>
 </html>

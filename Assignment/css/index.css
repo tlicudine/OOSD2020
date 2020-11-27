@@ -1,10 +1,15 @@
-body, html {
+body,html {
   height: 100%;
   margin: 0;
   font: 400 16px/1.8 "Kaushan Script", sans-serif;
   letter-spacing: 2px;
   color: #777;
 }
+
+section {
+  background-color: #000;
+}
+
 div {
   height: auto;
 }
@@ -69,17 +74,17 @@ div {
 }
 
 .hero {
-  background-image: url("img/BoatRiver.jpg");
+  background-image: url("../img/BoatRiver.jpg");
   min-height: 100%;
 }
 
 .bg2 {
-  background-image: url("img/Beach.jpg");
+  background-image: url("../img/Beach.jpg");
   min-height: 400px;
 }
 
 .bg3 {
-  background-image: url("img/Tower.jpg");
+  background-image: url("../img/Tower.jpg");
   min-height: 400px;
 }
 .caption {
@@ -100,24 +105,56 @@ div {
 }
 
 /* Image settings */
-img.gallery {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100px;
-  width: 100px;
-  border-radius: 5%;
-  max-width: 90%;
-  box-shadow: 0px 0px 30px 10px #FFFFFF;
-  transition-property: height, width;
-  transition-duration: .5s;
-  filter: sepia(50%);
+
+.gallerysection {
+  height: 100VH;
+    width: 95VW;
+    white-space: nowrap;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-img.gallery:hover {
-  width: 200px;
-  height: 200px;
-  filter: sepia(0%);
+.picDescContainer {
+  margin: 10px;
+  flex: 0 1 auto;
+}
+
+.picDescContainer img {
+  border-radius: 3%;
+    width: 250px;
+   height: auto;
+   filter: sepia(100%);
+   transform-origin: center center;
+  transition-property: height, width, filter, border-top-left-radius,
+  border-top-left-radius;
+  transition-duration: .8s;
+  transition-timing-function: ease-in-out;
+  vertical-align: middle;
+}
+
+.desc {
+  color: white;
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;
+    transition-property: opacity;
+    opacity: 0%;
+}
+
+.picDescContainer:hover .desc{
+  opacity: 100%;
+}
+
+.picDescContainer:hover img{
+    width: 600px;
+    filter: sepia(0%);
 }
 
 img.logo {

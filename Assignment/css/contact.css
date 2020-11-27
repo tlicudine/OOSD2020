@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+section {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: brown;
+    border: 2px solid green;
+    height: 100vh;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.contactContainer {
+    background-color: blue;
+    max-width: 100VW;
+    height: 10vh;
+    border: 2px solid red;
+    background-size: cover;
+    background-position: center;
+    flex: 1 1 auto;
+    min-height: 0;
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;
+    transition-property: height, sepia;
+    vertical-align: middle;
+    text-align: left;
+    padding: 2%;
+    filter: sepia(100%);
+}
+
+.desc {
+    background-color: sandybrown;
+    border: 2px solid pink;
+}
+
+.a {
+    background-image: url(../img/Madrid.jpg);
+}
+
+div.b {
+    background-image: url(../img/Cliff.jpg);
+}
+
+div.c {
+    background-image: url(../img/Venice.jpg);
+}
+
+div.d {
+    background-image: url(../img/Santorini.jpg);
+}
+
+.contactContainer:hover {
+    height: 600px;
+}
+
+.contactContainer:hover .name {
+    font-size: 4em;
+}
+
+.contactContainer:hover .desc {
+    opacity: 1;
+}
