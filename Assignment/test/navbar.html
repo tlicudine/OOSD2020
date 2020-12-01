@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        .index-nav-container {
+        }
+
+        body {
+            font-family: 'Nerko One', cursive;
+            background-color: lightslategray;
+        }
+
+        span {
+            border: 2px solid green;
+        }
+
+        article {
+            padding: 100px;
+        }
+
+        .index-nav-top-container {
+            width: 100%;
+            height: 80px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .index-nav-top-text {
+            display: inline-block;
+        }
+
+        .index-nav-bottom-container {
+            height: 80px;
+            width: 800px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: white;
+            border: 2px solid red;
+            border-radius: 15px 30px;
+            padding: 1em;
+            box-sizing: border-box;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+        }
+
+        .index-nav-search-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+
+        .index-nav-checkin-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+
+        .index-nav-checkout-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+
+        .index-nav-guests-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+        }
+
+        .nav-search {
+            width: 25%;
+            outline: none;
+        }
+
+        .index-nav-hiding-button {
+            visibility: hidden;
+        }
+
+        .index-nav-location:hover {}
+
+        .index-nav-startdate:hover {}
+
+        .index-nav-enddate:hover {}
+
+        .index-nav-guests:hover {}
+    </style>
+    <script>
+        window.onscroll = function () { stickyFunction() };
+
+        // Get the navbar
+        let navbar = document.getElementById("index-nav-bottom-container");
+
+        // Get the offset position of the navbar
+        let sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</head>
+
+<body style="margin:0">
+    <nav class="index-nav-container">
+        <div class="index-nav-top-container">
+            <img src="https://loremflickr.com/100/100" />
+            <span class="index-nav-top-text">Places to stay</span>
+            <span class="index-nav-top-text">Experiences</span>
+            <span class="index-nav-top-text">
+                <a href="/experiences">All Packages</a>
+            </span>
+            <span class="index-nav-hiding-button"></span>
+            <span><img src="https://loremflickr.com/50/50" />Login</span>
+        </div>
+        <div class="index-nav-bottom-container">
+            <div class="index-nav-search-container">
+                <span class="index-nav-search-label">
+                    <span class="index-nav-location"><input class="nav-search" type="text"
+                            placeholder="Search"></a></span>
+            </div>
+            <div class="index-nav-checkin-container">
+                <span class="index-nav-startdate">Check In</span>
+            </div>
+            <div class="index-nav-checkout-container">
+                <span class="index-nav-enddate">Check Out</span>
+            </div>
+            <div class="index-nav-guests-container">
+                <span class="index-nav-guests">Guests</span>
+            </div>
+            <div class="index-nav-searchbutton-container">
+                <span class="index-nav-guests">Guests</span>
+                <div class="index-nav-searchbutton">
+                    Search
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <article>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris justo velit, lobortis vel dignissim sed,
+            lobortis ac nulla. Integer eget mauris eget nulla aliquet rhoncus vitae at massa. Nullam egestas ligula et
+            felis
+            consequat, eget placerat ipsum rhoncus. Aliquam erat volutpat. Curabitur gravida maximus venenatis. Cras
+            tempor
+            dolor consectetur eros ullamcorper lobortis. Integer mollis felis eu libero maximus, vel tincidunt ex
+            faucibus.
+        </p>
+        <p>
+            Phasellus at tortor velit. Vestibulum et rutrum dolor. Ut nec vehicula leo. Pellentesque in vestibulum odio,
+            eget suscipit risus. Praesent eu libero nibh. Etiam facilisis dapibus leo, ut pellentesque nibh tempus eu.
+            Sed
+            consectetur pharetra purus facilisis elementum. Integer ornare tellus ut diam maximus, ac egestas erat
+            dictum.
+        </p>
+        <p>
+            Integer ultrices accumsan eros, pharetra fringilla libero tempor sit amet. Nulla iaculis quam lectus, in
+            bibendum urna condimentum eu. Pellentesque gravida velit nisi, eu cursus leo sagittis et. Nam justo libero,
+            volutpat eget sagittis id, posuere sit amet velit. Nam lacinia convallis risus, a euismod libero. Quisque
+            aliquam vestibulum dui vitae pretium. Etiam ultricies eget eros id pharetra. Aenean lectus sapien, pretium
+            sed
+            sem vitae, bibendum mattis ex. Quisque laoreet turpis id purus congue, vitae bibendum nisl sollicitudin.
+            Cras
+            sed neque efficitur, luctus ex at, posuere quam. Nulla facilisi. Cras consectetur porttitor diam, eget
+            tempus
+            justo.
+        </p>
+        <p>
+            Vivamus elit nunc, euismod ac placerat at, pharetra sit amet ante. Sed pellentesque purus vitae augue
+            molestie
+            bibendum. Suspendisse eu tristique lacus. Praesent eu euismod massa. Nulla hendrerit eget mauris a
+            efficitur.
+            Sed vel diam elit. In in nisi nec enim rhoncus vulputate. Donec ac lacus erat. Maecenas vestibulum tortor
+            lectus, non efficitur ex mattis in.
+        </p>
+        <p>
+            Etiam feugiat sagittis purus, nec malesuada ex semper eget. Vestibulum egestas ultricies turpis non
+            interdum.
+            Nullam sagittis arcu ac urna convallis, ac luctus neque cursus. Praesent finibus, elit vel ultrices
+            elementum,
+            nibh nisl tincidunt quam, vitae pellentesque augue ligula a diam. Etiam magna quam, vehicula vitae justo
+            varius,
+            pretium rutrum ligula. Vestibulum lacinia vulputate diam, nec eleifend nulla luctus vel. Nunc vitae ex
+            tempor
+            diam molestie consectetur. Sed in ligula nec risus volutpat egestas viverra sed arcu. In hac habitasse
+            platea
+            dictumst.
+        </p>
+        <p>
+            Fusce eget egestas orci. Nunc sit amet sagittis arcu. Vestibulum iaculis ultrices ante, sed mollis ante
+            dictum
+            id. Mauris laoreet commodo tempor. Ut non neque blandit nulla maximus fermentum vel id tellus. Sed nunc est,
+            malesuada et hendrerit eget, tempor a ipsum. Aenean consectetur elit mi, in auctor dui elementum sit amet.
+            Sed
+            accumsan varius enim. Fusce ullamcorper, turpis eu semper congue, tellus risus porttitor sapien, et
+            fringilla
+            eros lorem quis massa.
+        </p>
+        <p>
+            Quisque magna metus, mattis viverra enim sit amet, mollis facilisis odio. Mauris odio nunc, volutpat sed
+            nisl
+            dapibus, imperdiet maximus eros. Morbi gravida in ligula vitae laoreet. Proin dapibus, nulla ac auctor
+            accumsan,
+            nisl massa facilisis arcu, eget semper nisi orci vel ipsum. Vivamus nibh tortor, lacinia a ligula ut,
+            placerat
+            congue ante. Integer vel orci mauris. Maecenas eget ante quis nisl mattis mattis. Ut elementum leo dolor,
+            vitae
+            hendrerit ipsum mattis sit amet. Donec eu iaculis felis. Aliquam ut mollis tellus, id viverra urna.
+            Pellentesque
+            dictum dui odio, viverra finibus mauris fermentum non. Maecenas rhoncus ultrices convallis. Curabitur
+            volutpat
+            sem sit amet urna aliquam rhoncus.
+        </p>
+        <p>
+            Curabitur aliquam maximus dui, ut interdum arcu. Vestibulum ante ipsum primis in faucibus orci luctus et
+            ultrices posuere cubilia curae; Aliquam egestas maximus placerat. Nam pharetra porttitor tellus in egestas.
+            Quisque pharetra sed turpis sit amet imperdiet. Donec sit amet maximus magna. Praesent eget rhoncus eros.
+            Vestibulum quis vehicula lacus. Nullam fringilla arcu turpis, at iaculis lectus congue at. Fusce ut auctor
+            sapien. Quisque eros ex, accumsan sed ex sit amet, commodo consectetur quam. Pellentesque habitant morbi
+            tristique senectus et netus et malesuada fames ac turpis egestas. Nam malesuada imperdiet sollicitudin.
+            Morbi
+            dapibus purus ex, tincidunt vehicula mauris posuere ut. Phasellus maximus quis justo nec tempus.
+        </p>
+        <p>
+            Mauris auctor suscipit diam sit amet convallis. Curabitur eu enim id erat semper interdum. In tellus nibh,
+            sodales sit amet magna in, laoreet cursus tellus. Integer pharetra, nunc vitae sagittis elementum, dolor
+            libero
+            pellentesque mi, a efficitur est purus dignissim erat. Curabitur quis ante nec mi pharetra aliquet. Quisque
+            sit
+            amet massa nec justo tempor posuere. Duis consectetur posuere elit, eu placerat ligula commodo ut. Nam sed
+            iaculis nisl. Quisque vitae massa vehicula, sollicitudin tortor ut, interdum quam. Integer vulputate, libero
+            in
+            finibus lobortis, dolor nisi accumsan turpis, eget ultrices neque odio sed neque. Nullam in turpis enim.
+            Pellentesque tristique erat elit, sit amet laoreet purus viverra vitae. Cras pretium mollis facilisis. Ut
+            facilisis tortor ac mauris tincidunt, in faucibus felis tincidunt. Maecenas at dui elit. In vestibulum
+            luctus
+            libero, a tristique nunc viverra sit amet.
+        </p>
+        <p>
+            Ut eget elementum nibh. Vivamus eget imperdiet augue, id pretium orci. Proin at semper sapien. Quisque
+            porttitor
+            lacus ut dolor finibus, quis fermentum tellus ultrices. Curabitur faucibus vel nibh in cursus. Pellentesque
+            ullamcorper at est ac aliquam. Pellentesque quis arcu pulvinar, bibendum lectus eu, pretium augue. Proin ac
+            suscipit augue, sit amet dignissim dui. Praesent id arcu pellentesque, placerat neque non, feugiat odio. Ut
+            euismod iaculis finibus.
+        </p>
+        <p>
+            Praesent imperdiet tortor malesuada libero varius tempus. Sed lorem mi, interdum at egestas eget, efficitur
+            laoreet justo. Curabitur condimentum molestie fermentum. Sed aliquet nulla nunc, at tempus erat blandit sed.
+            Morbi accumsan mi sed urna ornare, ac tempus purus iaculis. Cras gravida suscipit nulla id rutrum. Sed in
+            nisl
+            ut ex iaculis pretium pellentesque non sapien.
+        </p>
+        <p>
+            Integer sed metus accumsan, malesuada eros eu, feugiat purus. Morbi condimentum elementum euismod. Sed
+            ornare
+            vulputate elit, non laoreet quam pulvinar a. Aliquam condimentum vestibulum pharetra. Vestibulum at lacus
+            placerat, euismod mauris vel, pretium lorem. Donec vulputate aliquam ornare. Duis sapien sem, rutrum et
+            sagittis
+            in, aliquet sit amet nunc. Vestibulum elementum ipsum metus, et sagittis ex commodo non. Phasellus suscipit
+            ante
+            vitae sagittis vehicula.
+        </p>
+        <p>
+            Integer eu magna egestas, molestie nisl ut, bibendum ligula. Cras efficitur blandit elit, sit amet porta
+            magna
+            vulputate quis. In hac habitasse platea dictumst. Sed mauris arcu, varius at rhoncus at, fermentum quis
+            diam.
+            Duis lobortis efficitur elit eget lacinia. Etiam sit amet est vel ipsum ornare egestas. Proin eu viverra
+            nulla.
+            Quisque malesuada, nunc sit amet vulputate accumsan, sapien augue sagittis diam, sit amet pretium erat est
+            nec
+            massa. Phasellus tempus quam at mi porttitor, id rhoncus sem ultrices. Duis fermentum euismod sodales.
+            Aenean ut
+            risus euismod leo mollis suscipit vel a nunc. Morbi at mi in enim gravida molestie at vel lectus.
+        </p>
+        <p>
+            Mauris pretium dui vitae eros pretium, sit amet ultricies leo pellentesque. Sed a vulputate eros, a sodales
+            risus. Nulla turpis quam, scelerisque nec elit et, dapibus tincidunt nisl. Vestibulum mollis maximus sapien,
+            sit
+            amet facilisis ligula interdum eu. Phasellus sagittis massa lectus, at posuere lorem egestas quis. Quisque
+            risus
+            lectus, tristique quis libero ut, fringilla dictum arcu. Proin in ligula nunc. Vivamus in felis eros. Morbi
+            nec
+            eleifend leo, sed maximus tellus. Duis faucibus tempor nulla, id pharetra felis. Pellentesque orci lorem,
+            sollicitudin et tincidunt faucibus, condimentum in purus. Suspendisse potenti. Nulla a neque dictum,
+            condimentum
+            arcu ut, finibus massa.
+        </p>
+
+    </article>
+</body>
+
+</html>
