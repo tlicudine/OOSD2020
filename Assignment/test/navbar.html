@@ -9,16 +9,9 @@
     <title>Document</title>
 
     <style>
-        .index-nav-container {
-        }
-
         body {
             font-family: 'Nerko One', cursive;
             background-color: lightslategray;
-        }
-
-        span {
-            border: 2px solid green;
         }
 
         article {
@@ -50,9 +43,6 @@
             border-radius: 15px 30px;
             padding: 1em;
             box-sizing: border-box;
-            position: sticky;
-            top: 80px;
-            z-index: 100;
         }
 
         .index-nav-search-container {
@@ -96,24 +86,7 @@
 
         .index-nav-guests:hover {}
     </style>
-    <script>
-        window.onscroll = function () { stickyFunction() };
 
-        // Get the navbar
-        let navbar = document.getElementById("index-nav-bottom-container");
-
-        // Get the offset position of the navbar
-        let sticky = navbar.offsetTop;
-
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function stickyFunction() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-            } else {
-                navbar.classList.remove("sticky");
-            }
-        }
-    </script>
 
 </head>
 
