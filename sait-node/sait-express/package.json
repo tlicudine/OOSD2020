@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "day1": "nodemon day1.js",
+    "day2": "nodemon day2.js",
+    "day3": "nodemon day2.js",
+    "day4": "nodemon day2.js",
+    "day5": "nodemon day2.js"
   },
   "author": "Tim",
   "license": "ISC",

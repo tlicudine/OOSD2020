@@ -1,8 +1,8 @@
 let arr = [
-    "Hi",
-    "Hello",
-    "Aloha",
-    "Sup"
+    "You OTTER know, I like you",
+    "I think we should keep seeing each OTTER",
+    "Hello from the OTTER side",
+    "You are OTTER-ly adorable"
 ];
 
 const randomGreeting = () => {
