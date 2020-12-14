@@ -1,9 +1,4 @@
-body {
-    margin: 0;
-    /* overflow: hidden; */
-}
-
-section {
+.contact-section {
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +9,7 @@ section {
     box-sizing: border-box;
 }
 
-.contactContainer {
+.contact-container {
     background-color: blue;
     max-width: 100VW;
     height: 10vh;
@@ -37,7 +32,7 @@ section {
 }
 
 
-.name {
+.contact-name {
     transition-duration: .8s;
     transition-timing-function: ease-in-out;
     transition-property: font-size;
@@ -45,7 +40,7 @@ section {
     flex: 1 1 auto;
 }
 
-.desc {
+.contact-desc {
     background-color: rgba(255,255,255,.5);
     flex: 1 1 auto;
     transition-duration: .8s;
@@ -57,31 +52,31 @@ section {
     padding: 1em ;
 }
 
-.a {
-    background-image: url(../img/Madrid.jpg);
+.contact1 {
+    background-image: url(./img/Madrid.jpg);
 }
 
-div.b {
-    background-image: url(../img/Cliff.jpg);
+.contact2 {
+    background-image: url(./img/Cliff.jpg);
 }
 
-div.c {
-    background-image: url(../img/Venice.jpg);
+.contact3 {
+    background-image: url(./img/Venice.jpg);
 }
 
-div.d {
-    background-image: url(../img/Santorini.jpg);
+.contact4 {
+    background-image: url(./img/Santorini.jpg);
 }
 
-.contactContainer:hover {
+.contact-container:hover {
     height: 600px;
     filter: sepia(0%) saturate(150%);
 }
 
-.contactContainer:hover .name {
+.contact-container:hover .contact-name {
     font-size: 4em;
 }
 
-.contactContainer:hover .desc {
+.contact-container:hover .contact-desc {
     opacity: 1;
 }

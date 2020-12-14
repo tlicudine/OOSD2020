@@ -2,80 +2,87 @@
 <html>
 
 <head>
-	
-	<title></title>
-	<link rel="stylesheet" href="register.css">
+
+	<title>Registration</title>
+	<meta name="description" content="Surreal Travel" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./reset.css">
+	<link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
-	<form action="bouncer.php" method="POST" onsubmit="return confirm('Do you really want to submit the form?');">
 
-		<fieldset class="container">
+	<section class="registration-section">
+		<form class="form-container" action="bouncer.php" method="POST"
+			onsubmit="return confirm('Do you really want to submit the form?');">
+			<h1 class="form-title">Fill out the form for more information</h1>
 
-			<h1>Fill out the form for more information</h1>
-
-			<span class="container">
-				<label class="formlabel" for="firstName">First Name</label>
+			<span class="input-container">
+				<label class="form-label" for="firstName">First Name</label>
 				<input type="text" name="firstName" id="firstName" required>
 			</span>
 
-			<span class="container">
-				<label class="formlabel" for="lastName">Last Name:</label>
+			<span class="input-container">
+				<label class="form-label" for="lastName">Last Name:</label>
 				<input type="text" name="lastName" required>
 			</span>
 
-			<span class="container">
-				<label class="formlabel" for="email">Email</label>
+			<span class="input-container">
+				<label class="form-label" for="email">Email</label>
 				<input type="email" name="email" id="email" required>
 			</span>
 
-			<span class="container">
-				<label class="formlabel" for="password">Password</label>
+			<span class="input-container">
+				<label class="form-label" for="password">Password</label>
 				<input type="password" name="password" id="password" required>
 			</span>
 
-			<span class="container">
-				<label>Gender<label>
-				<div class="container">
-					<input type="radio" name="gender" value="male" id="male" style="width: 2em; height: 2em;" required>
+			<span class="input-container">
+				<label class="form-label">Gender</label>
+				<span class="radio-container">
+					<input type="radio" name="gender" value="male" id="male" required>
 					<label>Male</label>
-					<input type="radio" name="gender" value="female" id="female" style="width: 2em; height: 2em;">
-					<label>Female</label>	
-					<input type="radio" name="gender" value="other" id="other" style="width: 2em; height: 2em;">
+					<input type="radio" name="gender" value="female" id="female">
+					<label>Female</label>
+					<input type="radio" name="gender" value="other" id="other">
 					<label>Other</label>
-				</div>
+				</span>
 			</span>
-			
-			<span class="container">
-				<label for="age">Are you over 18?</label>
+
+			<span class="input-container">
+				<label class="form-label" for="age">Are you over 18?</label>
 				<input type="checkbox" name="age" id="age" value="over18" required>
 			</span>
 
-			<span class="container">
-				<label class="formlabel">Desired Trip Start</label>
+			<span class="input-container">
+				<label class="form-label">Desired Trip Start</label>
 				<input type="date" name="tripStart" id="tripStart" required>
 			</span>
 
-			<span class="container">
-				<label class="formlabel">Desired Travel End</label>
+			<span class="input-container">
+				<label class="form-label">Desired Travel End</label>
 				<input type="date" name="tripEnd" id="tripEnd" required>
 			</span>
 
-			<span class="container">
+			<span class="input-container">
 				<button type="submit" value="Submit" onclick="return validate()">
 					Submit Information
 				</button>
 				<button type="reset" value="Reset">
-				Reset Form
+					Reset Form
 				</button>
 			</span>
 
-		</fieldset>
-		
-	</form>
+			</fieldset>
 
-<script src="register.js"></script>
+		</form>
+	</section>
+
+	<script src="register.js"></script>
 
 </body>
+
 </html>

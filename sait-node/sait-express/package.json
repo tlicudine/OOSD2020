@@ -2,19 +2,15 @@
   "name": "sait-express",
   "version": "1.0.0",
   "description": "Practicing express.js",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "day1": "nodemon day1.js",
-    "day2": "nodemon day2.js",
-    "day3": "nodemon day2.js",
-    "day4": "nodemon day2.js",
-    "day5": "nodemon day2.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tim",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
     "pug": "^3.0.0"
   }
 }

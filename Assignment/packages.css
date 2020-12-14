@@ -1,0 +1,43 @@
+/* cream: #EFEADD;
+tar: #131826 ;
+plum: #5B3547 ;
+mauve: #8B677C ;
+eggplant: #726567; */
+
+body {
+    background-color: #EFEADD;
+    margin: 0;
+    border: 0;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.gallery-item-container {
+    flex: 0 1 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #131826;
+}
+
+img {
+    height: 200px;
+    width: 300px;
+}
+
+
+/* 
+tar: #131826 ;
+plum: #5B3547 ;
+mauve: #8B677C ;
+eggplant: #726567 ; 
+cream: #EFEADD;
+*/
