@@ -1,49 +1,118 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title></title>
-    <link rel="stylesheet" href="packages.css">
-</head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
 
+		body {
+			background-color: black;
+		}
+		
+		.gallerysection {
+			height: 100VH;
+		    width: 95VW;
+		    white-space: nowrap;
+		    text-align: center;
+		    box-sizing: border-box;
+		    display: flex;
+		    flex-wrap: nowrap;
+		    justify-content: center;
+		    align-items: center;
+		    /*overflow-x: hidden;*/
+		    margin: auto;
+		}
+
+		.picDescContainer {
+			margin: 10px;
+			/*border: 2px solid red;*/
+			/*width: auto;*/
+			flex: 0 1 auto;
+		}
+
+		.picDescContainer img {
+			border-radius: 3%;
+			/*clear: before;*/
+		  	width: 250px;
+		 	height: auto;
+		 	filter: sepia(100%);
+		 	transform-origin: center center;
+			transition-property: height, width, filter, border-top-left-radius,
+			border-top-left-radius;
+			transition-duration: .8s;
+			transition-timing-function: ease-in-out;
+			vertical-align: middle;
+		}
+
+		.desc {
+			color: white;
+			/*box-sizing: border-box;*/
+		  	/*padding: 15px;*/
+		  	height: 30px;
+		  	/*width: auto;*/
+		  	/*border: 2px solid blue;*/
+		  	text-align: center;
+		  	overflow: hidden;
+		  	transition-duration: .8s;
+		  	transition-timing-function: ease-in-out;
+		  	transition-property: opacity;
+		  	opacity: 0%;
+		  	/*visibility: hidden;*/
+		}
+
+		.picDescContainer:hover .desc{
+			/*height: auto;*/
+			/*visibility: visible;*/
+			opacity: 100%;
+		}
+
+		.picDescContainer:hover img{
+		  	width: 600px;
+		  	filter: sepia(0%);
+		}
+
+	</style>
+</head>
 <body>
 
-    <div class="gallery-container" id="page">
-        <div class="gallery-item-container">
+	<div class="gallerysection">
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Waterfall1.jpg">
+			<img src="./img/Waterfall1.jpg" alt="Forest" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
 
-            <div class="gallery-package-name">Italy</div>
-            <img class="gallery-img" src="./img/Venice.jpg" alt="Italy">
-            <div class="gallery-desc">A boat in a canal of Venice</div>
-            <div><button type="Buy this package"></div>
-        </div>
-        <div class="gallery-item-container">
-            <div class="gallery-package-name">Spain</div>
-            <img class="gallery-img" src="./img/Madrid.jpg" alt="Spain">
-            <div class="gallery-desc">A warm beach in Madrid</div>
-            <div><button type="Buy this package"></div>
-        </div>
-        <div class="gallery-item-container">
-            <div class="gallery-package-name">Greece</div>
-            <img class="gallery-img" src="./img/Santorini.jpg" alt="Greece">
-            <div class="gallery-desc">The beautiful coast and characteristic buildings of Santorini</div>
-            <div><button type="Buy this package"></div>
-        </div>
-        <div class="gallery-item-container">
-            <div class="gallery-package-name">New Zealand</div>
-            <img class="gallery-img" src="./img/NewZealand.jpg" alt="New Zealand">
-            <div class="gallery-desc">Where the epic journey of some hobbits was filmed</div>
-            <div><button type="Buy this package"></div>
-        </div>
-        <div class="gallery-item-container">
-            <div class="gallery-package-name">Australia</div>
-            <img class="gallery-img" src="./img/Sydney.jpg" alt="Italy">
-            <div class="gallery-desc">The city coastline of Sydney</div>
-            <div><button type="Buy this package"></div>
-        </div>
-    </div>
-    <!-- <script src="packageGallery.js">
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Cliff.jpg">
+			<img src="./img/Cliff.jpg" alt="Northern Lights" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
 
-		</script> -->
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Madrid.jpg">
+			<img src="./img/Madrid.jpg" alt="Cinque Terre" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Venice.jpg">
+			<img src="./img/Venice.jpg" alt="Forest" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+		<div class="picDescContainer">
+			<a target="_blank" href="../img/Santorini.jpg">
+			<img src="./img/Santorini.jpg" alt="Northern Lights" width="600" height="400">
+			</a>
+			<div class="desc">Add a description of the image here</div>
+		</div>
+
+	</div>
+
+
 </body>
-
 </html>

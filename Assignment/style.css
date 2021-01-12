@@ -14,21 +14,32 @@ body {
 
 .hero-title-container {
     position: absolute;
-    height: 80px;
-    width: 70%;
-    top: 50%;
+    height: 100px;
+    width: 80%;
+    top: 80%;
     left: 5%;
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+
+img.logo {
+    border-radius: 50%;
+    height: 80px;
+    width: auto;
 }
 
 .hero-logo {
     max-width: 50px;
-    flex: 0 1 5%;
+    flex: 1 1 5%;
+    padding: 20px;
 }
 
 .hero-title {
-    flex: 0 1 95%;
+    flex: 1 1 90%;
+    font-size: 2em;
+    text-shadow: #fff 1px 0 10px;
 }
 
 /* Navigation bar -----------------------------*/
@@ -57,12 +68,6 @@ body {
 #topnav a:active {
     background-color: grey;
     color: white;
-}
-
-section.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
 .hero, .bg2, .bg3 {
@@ -137,10 +142,23 @@ section.sticky {
     filter: sepia(0%);
 }
 
-img.logo {
-    border-radius: 50%;
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2em;
 }
 
+.links a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer{
+    text-align: center;
+}
 /* About --------------------------------------*/
 
 .about-section {
